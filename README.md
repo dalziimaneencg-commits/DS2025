@@ -1,0 +1,6 @@
+[Apprentissage Automatique Arbres de décision & méthodes ensemblistes 2 +.pdf](https://github.com/user-attachments/files/23628788/Apprentissage.Automatique.Arbres.de.decision.methodes.ensemblistes.2.%2B.pdf)
+[IntroIML pptx (1).pdf](https://github.com/user-attachments/files/23628789/IntroIML.pptx.1.pdf)
+[IntroIML +.pptx](https://github.com/user-attachments/files/23628790/IntroIML.%2B.pptx)
+[Collecte-et-gestion-des-données +.pdf](https://github.com/user-attachments/files/23628792/Collecte-et-gestion-des-donnees.%2B.pdf)
+[cours_ml_intro 1 +.pdf](https://github.com/user-attachments/files/23628793/cours_ml_intro.1.%2B.pdf)
+[tp ML +.pdf](https://github.com/user-attachments/files/23628795/tp.ML.%2B.pdf)
