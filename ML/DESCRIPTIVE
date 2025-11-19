@@ -1,1 +1,5 @@
+Les données ne sont pas normalisées : certaines échelles sont très différentes (ex: sulfites vs pH).
 
+La présence d’outliers est normale dans des données chimiques, mais leur effet doit être analysé avant modélisation.
+
+Ces graphiques montrent que le dataset est hétérogène, ce qui est intéressant pour distinguer les vins de qualité différente.
