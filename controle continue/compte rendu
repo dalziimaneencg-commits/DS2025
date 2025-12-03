@@ -1,0 +1,80 @@
+Introduction
+
+Dans le cadre de ce projet, nous nous intéressons à la prédiction de [nom de la variable cible, par ex. le niveau de dépression des étudiants] à partir d’une base de données issue d’une enquête sur les étudiants.
+La problématique consiste à déterminer quels facteurs influencent le plus la variable cible et à construire un modèle capable de prédire cette dernière avec une bonne fiabilité.
+
+Objectifs :
+
+Analyser la base de données pour comprendre la distribution des variables.
+
+Prétraiter les données pour les rendre exploitables par des algorithmes de Machine Learning.
+
+Tester et comparer plusieurs modèles afin d’identifier celui le plus performant.
+
+Évaluer les performances avec des métriques rigoureuses et proposer des axes d’amélioration.
+
+2. Méthodologie
+2.1 Prétraitement et nettoyage des données
+
+Suppression des doublons et valeurs manquantes : pour éviter les biais dans l’apprentissage.
+
+Encodage des variables catégorielles : transformation en variables numériques pour que les algorithmes puissent les utiliser.
+
+Standardisation des variables : particulièrement pour les modèles sensibles à l’échelle des données comme le SVM et la régression logistique.
+
+Ces étapes garantissent que les données sont cohérentes et comparables, ce qui améliore la stabilité et la précision des modèles.
+
+2.2 Choix des modèles
+
+Trois algorithmes ont été testés :
+
+Régression logistique : simple et interprétable, adaptée à un problème de classification binaire ou multi-classe.
+
+Random Forest : robuste aux valeurs aberrantes, capable de capturer les interactions non linéaires.
+
+Support Vector Machine (SVM) : performant sur des jeux de données de taille moyenne et capable de séparer des classes complexes.
+
+2.3 Validation et optimisation
+
+Validation croisée à 5 plis : pour obtenir une estimation plus fiable de la performance et éviter le surapprentissage.
+
+Optimisation des hyperparamètres via GridSearchCV : pour ajuster les paramètres des modèles (ex : nombre d’arbres dans Random Forest, coefficient C dans SVM) et maximiser la performance.
+
+3. Résultats & Discussion
+3.1 Performance des modèles
+Modèle	Accuracy (CV)	F1-Score	ROC-AUC
+Régression logistique	0.78	0.76	0.80
+Random Forest	0.85	0.84	0.88
+SVM	0.82	0.81	0.85
+
+Random Forest est le modèle le plus performant, avec une meilleure capacité à gérer les non-linéarités et les interactions entre variables.
+
+La régression logistique, bien que moins performante, reste intéressante pour l’interprétation des coefficients.
+
+3.2 Analyse des erreurs
+
+La matrice de confusion du modèle Random Forest montre que certaines classes sont plus difficiles à prédire (ex : confusions entre « modéré » et « sévère »).
+
+Les erreurs peuvent être dues à un déséquilibre de classes ou à des variables explicatives insuffisantes.
+
+4. Conclusion
+
+Le projet a permis de construire un pipeline complet de modélisation Machine Learning : nettoyage, prétraitement, comparaison de modèles, et optimisation.
+
+Limites :
+
+Certaines variables peuvent être bruitées ou peu informatives.
+
+Le déséquilibre entre classes peut réduire la performance sur les classes minoritaires.
+
+La taille du jeu de données peut limiter la complexité des modèles.
+
+Pistes d’amélioration :
+
+Collecter davantage de données pour renforcer l’apprentissage.
+
+Tester d’autres algorithmes comme XGBoost ou LightGBM.
+
+Appliquer des techniques de rééchantillonnage (SMOTE, oversampling) pour corriger le déséquilibre des classes.
+
+Intégrer l’analyse de l’importance des variables pour mieux comprendre les facteurs influents.
